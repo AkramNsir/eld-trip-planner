@@ -74,7 +74,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CORS
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://your-app.vercel.app",   # ← add your Vercel URL here
+    "https://eld-trip-planner-tawny.vercel.app/",  
 ]
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
