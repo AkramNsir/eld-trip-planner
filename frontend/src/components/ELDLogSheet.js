@@ -21,7 +21,7 @@ function ELDLogSheet({ log, dayIndex }) {
 
   useEffect(() => {
     drawLog();
-  }, [log]);
+  }, [log]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const drawLog = () => {
     const canvas = canvasRef.current;

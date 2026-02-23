@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './RouteMap.css';
 
 const STOP_COLORS = {
@@ -40,7 +40,7 @@ function RouteMap({ stops, routeCoords }) {
         mapInstanceRef.current = null;
       }
     };
-  }, [stops]);
+  }, [stops]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const initMap = () => {
     if (!mapRef.current || mapInstanceRef.current) return;

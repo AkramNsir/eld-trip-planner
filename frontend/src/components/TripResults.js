@@ -10,9 +10,6 @@ function TripResults({ data, onReset, cycleWarning }) {
 
   const { stops, day_logs, summary } = data;
 
-  const stopTypeIcon = {
-    start: '🚛', pickup: '📦', dropoff: '🏁', fuel: '⛽', rest: '🛏', break: '☕', driving: '🛣'
-  };
 
   return (
     <div className="results-container">
