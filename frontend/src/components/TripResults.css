@@ -1,0 +1,205 @@
+.results-container {
+  width: 100%;
+  animation: fadeInUp 0.4s ease;
+}
+
+/* Summary Bar */
+.summary-bar {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+
+.summary-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 64px;
+  flex-wrap: wrap;
+}
+
+.summary-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 28px;
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.summary-divider {
+  width: 1px;
+  height: 32px;
+  background: var(--border);
+}
+
+.reset-btn-wrap {
+  margin-left: auto;
+  padding-left: 20px;
+}
+
+.reset-btn {
+  background: transparent;
+  border: 1px solid var(--border-bright);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+}
+
+.reset-btn:hover {
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+}
+
+/* Tabs */
+.tab-nav {
+  display: flex;
+  gap: 0;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  padding: 14px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.tab-btn.active {
+  color: var(--accent-orange);
+  border-bottom-color: var(--accent-orange);
+}
+
+.tab-icon { font-size: 1rem; }
+
+.tab-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Map Tab */
+.map-tab {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .map-tab { grid-template-columns: 1fr; }
+}
+
+/* Logs Tab */
+.logs-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.day-selector {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.day-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  transition: all 0.2s;
+}
+
+.day-btn:hover {
+  border-color: var(--border-bright);
+  color: var(--text-primary);
+}
+
+.day-btn.active {
+  background: rgba(245, 130, 10, 0.1);
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+}
+
+.day-drive {
+  font-size: 0.62rem;
+  color: var(--text-muted);
+}
+
+.day-btn.active .day-drive {
+  color: var(--accent-orange-dim);
+}
+
+/* Cycle Warning Banner */
+.cycle-warning-banner {
+  background: rgba(255, 211, 42, 0.08);
+  border-left: 4px solid var(--accent-yellow);
+  border-bottom: 1px solid rgba(255, 211, 42, 0.2);
+  padding: 14px 24px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.cycle-warning-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cycle-warning-banner strong {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  color: var(--accent-yellow);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.cycle-warning-banner p {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}

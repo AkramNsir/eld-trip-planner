@@ -1,0 +1,142 @@
+.eld-sheet {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.eld-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-secondary);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.eld-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+}
+
+.eld-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.eld-stats {
+  display: flex;
+  gap: 16px;
+}
+
+.eld-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.eld-stat-val {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.eld-stat-val.off-duty { color: #4a90d9; }
+.eld-stat-val.sleeper { color: #9b59b6; }
+.eld-stat-val.driving { color: #27ae60; }
+.eld-stat-val.on-duty { color: #e67e22; }
+
+.eld-stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+}
+
+.download-btn {
+  background: rgba(29, 140, 248, 0.1);
+  border: 1px solid rgba(29, 140, 248, 0.3);
+  color: var(--accent-blue);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 7px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.download-btn:hover {
+  background: rgba(29, 140, 248, 0.2);
+}
+
+.canvas-wrapper {
+  background: #fff;
+  overflow-x: auto;
+  padding: 16px;
+}
+
+.eld-canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+/* Mobile table */
+.eld-mobile-table {
+  display: none;
+  padding: 16px;
+}
+
+@media (max-width: 640px) {
+  .eld-mobile-table { display: block; }
+  .canvas-wrapper { display: none; }
+}
+
+.eld-mobile-table h4 {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.eld-mobile-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.eld-mobile-table th {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.eld-mobile-table td {
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.off-duty-dot { background: #4a90d9; }
+.sleeper-dot { background: #9b59b6; }
+.driving-dot { background: #27ae60; }
+.on-duty-dot { background: #e67e22; }
